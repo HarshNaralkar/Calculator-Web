@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Roboto', sans-serif;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    width: 320px;
+    position: relative;
+    z-index: 1;
+}
+
+.display {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#result {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #00C8FF;
+    font-size: 2.5rem;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.history {
+    font-size: 1rem;
+    color: rgba(0, 200, 255, 0.5);
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 10px;
+    color: #00C8FF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: rgba(0, 200, 255, 0.2);
+    box-shadow: 0 0 10px #00C8FF;
+}
+
+.equals {
+    grid-column: span 2;
+    background: #00C8FF;
+    color: #0f2027;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#theme-toggle {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00C8FF;
+    font-size: 1.5rem;
+    grid-column: span 1;
+}
+
+#theme-toggle:hover {
+    background: rgba(0, 200, 255, 0.2);
+    box-shadow: 0 0 10px #00C8FF;
+}
+
+body.light {
+    background: linear-gradient(135deg, #eef2f3, #8e9eab);
+}
+
+.calculator.light {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.display.light {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#result.light {
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.history.light {
+    color: #333333;
+    background-color: #ffffff;
+}
+
+button.light {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333333;
+}
+
+button.light:hover {
+    background: rgba(100, 100, 100, 0.2);
+    box-shadow: 0 0 10px #333333;
+}
+
+.equals.light {
+    background: #333333;
+    color: #ffffff;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.2), transparent);
+}
